@@ -52,8 +52,14 @@ class Owner
   end 
   
   def sell_pets
-    dogs.collect! { |d| d.mood = "nervous" d.owner = "" }
-    cats.collect! { |c| c.mood = "nervous" c.owner = "" }
+    dogs.collect! do |d| 
+      d.mood = "nervous" 
+      d.owner = "" 
+    end 
+    cats.collect! do |c| 
+      c.mood = "nervous" 
+      c.owner = "" 
+    end 
   end 
   
   

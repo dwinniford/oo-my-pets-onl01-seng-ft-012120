@@ -6,7 +6,6 @@ class Owner
   def initialize(name)
     @name = name
     @species = "human"
-    @pets = []
     @@all << self 
   end 
   
@@ -24,6 +23,10 @@ class Owner
   
   def self.reset_all
     @@all = []
+  end 
+  
+  def cats 
+    Cat.all.select { |c| c.owner == self }
   end 
   
 end

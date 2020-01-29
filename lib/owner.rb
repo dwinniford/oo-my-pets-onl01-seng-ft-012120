@@ -36,12 +36,7 @@ class Owner
   end 
   
   def buy_cat(cat_name) 
-    Cat.all.collect! do |c| 
-      if c.name == cat_name 
-        binding.pry 
-      c.owner= self
-      end 
-    end 
+    Cat.new(cat_name, self)
   end 
     
   

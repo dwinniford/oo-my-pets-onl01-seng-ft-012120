@@ -1,3 +1,5 @@
+require 'pry'
+
 class Owner
   attr_reader :name, :species
   
@@ -36,6 +38,7 @@ class Owner
   def buy_cat(cat_name) 
     Cat.all.collect! do |c| 
       if c.name == cat_name 
+        binding.pry 
       c.owner= self
       end 
     end 

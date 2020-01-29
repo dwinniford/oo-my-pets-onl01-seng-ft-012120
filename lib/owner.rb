@@ -46,6 +46,17 @@ class Owner
   def walk_dogs
     dogs.collect! { |d| d.mood = "happy" }
   end 
+  
+  def feed_cats
+    cats.collect! { |c| c.mood = "happy" }
+  end 
+  
+  def sell_pets
+    dogs.collect! { |d| d.mood = "nervous" d.owner = "" }
+    cats.collect! { |c| c.mood = "nervous" c.owner = "" }
+  end 
+  
+  
     
 
   

@@ -34,8 +34,11 @@ class Owner
   end 
   
   def buy_cat(cat_name) 
-    cat_ins = Cat.all.detect { |c| c.name == cat_name }
-    cat_ins.owner= self 
+    Cat.all.collect! do |c| 
+      if c.name == cat_name 
+      c.owner= self
+      end 
+    end 
   end 
     
   

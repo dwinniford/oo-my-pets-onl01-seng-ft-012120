@@ -1,3 +1,11 @@
 class Owner
-  # code goes here
+  attr_reader :name 
+  
+  @@pets = []
+  
+  def initialize(name)
+    @name = name
+  end 
+  
+  
 end
